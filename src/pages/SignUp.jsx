@@ -20,6 +20,11 @@ export default function SignUp() {
     }));
   }
 
+  function onSubmit(e) {
+    e.preventDefault();
+    console.log(formData);
+  }
+
   return (
     <section>
       <h1 className="text-3xl text-center mt-6 font-bold">Sign Up</h1>
@@ -32,7 +37,7 @@ export default function SignUp() {
           />
         </div>
         <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20 lg:-mt-6">
-          <form>
+          <form onSubmit={onSubmit}>
             <div className="mb-4">
               <input
                 type="text"
