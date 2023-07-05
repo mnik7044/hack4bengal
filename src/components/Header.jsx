@@ -9,43 +9,75 @@ export default function Header() {
     return route === location.pathname;
   }
   return (
-    <div className=" bg-white border-b shadow-sm sticky top-0 z-50">
-      <header className=" flex justify-between items-center px-3 max-w-6xl mx-auto">
-        <div>
+    <div className="bg-white border-b shadow-sm sticky top-0 z-50">
+      <header className=" @apply h-[65px] flex  justify-between items-center px-3  mx-auto">
+        <div className="@apply flex items-center w-[276px] h-[77px] shrink-0;">
           <img
-            src="https://static.rdc.moveaws.com/images/logos/rdc-logo-default.svg"
+            src="https://cdn-icons-png.flaticon.com/128/2382/2382461.png"
             alt="realtor-logo"
-            className="h-5 cursor-pointer"
+            className="@apply w-[60px] h-[60px] shrink-0; cursor-pointer"
             onClick={() => navigate("/")}
           />
+          <p className="@apply text-[#233348] text-4xl not-italic font-bold leading-[normal] pl-3
+  font-family: Poppins; cursor-pointer" onClick={() => navigate("/")}>HEALIFY</p>
         </div>
         <div>
           <ul className="flex space-x-10">
             <li
-              className={`py-3 cursor-pointer text-sm font-semibold ${
+              className={`py-3 cursor-pointer text-mb font-semibold ${
                 PathMatchRoute("/")
-                  ? "text-black border-b-red-600"
-                  : "text-gray-500 border-b-transparent"
+                ? "text-black"
+                : "text-gray-400"
               }`}
               onClick={() => navigate("/")}
             >
               Home
             </li>
             <li
-              className={`py-3 cursor-pointer text-sm font-semibold ${
-                PathMatchRoute("/Offers")
-                  ? "text-black border-b-red-600"
-                  : "text-gray-500 border-b-transparent"
+              className={`py-3 cursor-pointer text-mb font-semibold ${
+                PathMatchRoute("/TeleMedicine")
+                ? "text-black"
+                : "text-gray-400"
               }`}
-              onClick={() => navigate("/Offers")}
+              onClick={() => navigate("/TeleMedicine")}
             >
-              Offers
+              Tele Medicine
             </li>
             <li
-              className={`py-3 cursor-pointer text-sm font-semibold ${
+              className={`py-3 cursor-pointer text-mb font-semibold ${
+                PathMatchRoute("/MentalHealth")
+                ? "text-black"
+                : "text-gray-400"
+              }`}
+              onClick={() => navigate("/MentalHealth")}
+            >
+              Mental Health
+            </li>
+            <li
+              className={`py-3 cursor-pointer text-mb font-semibold ${
+                PathMatchRoute("/GenericMedicine")
+                ? "text-black"
+                : "text-gray-400"
+              }`}
+              onClick={() => navigate("/GenericMedicine")}
+            >
+              Generic Medicine
+            </li>
+            <li
+              className={`py-3 cursor-pointer text-mb font-semibold ${
+                PathMatchRoute("/AboutUs")
+                ? "text-black"
+                : "text-gray-400"
+              }`}
+              onClick={() => navigate("/AboutUs")}
+            >
+              About Us
+            </li>
+            <li
+              className={`py-3 cursor-pointer text-mb font-semibold pr-3 ${
                 PathMatchRoute("/Sign-In")
-                  ? "text-black border-b-red-600"
-                  : "text-gray-500 border-b-transparent"
+                  ? "text-black"
+                  : "text-gray-400"
               }`}
               onClick={() => navigate("/Sign-In")}
             >
