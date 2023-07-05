@@ -1,4 +1,5 @@
 import React from "react";
+import doc from '../assets/Doctors-pana.svg'
 
 export default function AboutUs() {
   const teamMembers = [
@@ -31,15 +32,15 @@ export default function AboutUs() {
       name: "Rajdip Sinha",
       imageSrc:
         "https://img.freepik.com/free-vector/playful-cat-concept-illustration_114360-5268.jpg?t=st=1688554756~exp=1688555356~hmac=28b8b384b895cb21c1ac12fa345e9641759fe46e554c4f6bbbc02576a8a993d9",
-      linkedInUrl: "https://www.linkedin.com/in/ekam-bitt/",
-      twitterUrl: "https://twitter.com/BittEkam",
-      githubUrl: "https://github.com/Ekam-Bitt",
+      linkedInUrl: "https://www.linkedin.com/in/rajdip-sinha-23789a220/",
+      twitterUrl: "https://twitter.com/rajdips834",
+      githubUrl: "https://github.com/rajdips834",
     },
   ];
 
   return (
     <div>
-      <div className="h-[460px] flex flex-col justify-center shrink-0 bg-[#ffe6e2]">
+      <div className="h-[460px] flex flex-col justify-center shrink bg-[#ffe6e2]">
         <h1 className="text-black text-5xl font-normal leading-normal pl-6 font-family: Alatsi">
           Our Team
         </h1>
@@ -90,7 +91,7 @@ export default function AboutUs() {
         <div className="h-[85%] bg-[#CFB9FF] flex justify-between">
           <div className="w-[40%]">
             <img
-              src="https://img.freepik.com/premium-vector/health-professionals-hand-drawn-design_23-2148498873.jpg?w=1480"
+              src={doc}
               alt=""
             />
           </div>
