@@ -28,31 +28,7 @@ export default function SignUp() {
 
   async function onSubmit(e) {
     e.preventDefault();
-    // console.log(formData);
-
-    //In order to add firebase just trying to handle the error
-
-    // try {
-    //   const auth = getAuth()
-    //   const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-
-    //   updateProfile(auth.currentUser, {
-    //     displayName: name,
-    //   })
-    //   const user = userCredential.user;
-    //   const formDataCopy = {...formData};
-    //   delete formDataCopy.password;
-    //   formDataCopy.timestamp = serverTimestamp();
-
-    //   await setDoc(doc(db, "users", user.uid), formDataCopy);
-    // // const docRef = await addDoc(collection(db, "users"), { formDataCopy });
-    // // console.log("Document written with ID: ", docRef.id);
-    //   navigate("./Home")
-    //   toast.success("Sign up was successful")
-      
-    // } catch (error) {
-    //   toast.error("Something went wrong with the registration")
-    // }
+    
 
      try {
       const auth = getAuth();
@@ -71,10 +47,10 @@ export default function SignUp() {
       formDataCopy.timestamp = serverTimestamp();
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
-      // toast.success("Sign up was successful");
-      navigate("./pages/Home");
+      toast.success("Sign up was successful");
+      navigate("../");
     } catch (error) {
-      //toast.error("Something went wrong with the registration");
+      toast.error("Something went wrong with the registration");
       console.log(error);
     }
   }
