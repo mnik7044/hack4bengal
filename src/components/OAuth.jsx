@@ -4,9 +4,11 @@ import React from 'react'
 import { FcGoogle } from "react-icons/fc";
 import { toast } from 'react-toastify';
 import { db } from '../firebase';
-import { Navigate } from 'react-router';
+import { useNavigate } from "react-router-dom";
 
 export default function OAuth() {
+
+  const navigate = useNavigate()
   async function onGoogleClick(){
     try {
       const auth = getAuth()
@@ -27,7 +29,7 @@ export default function OAuth() {
           timestamp: serverTimestamp(),
         });
       }
-      Navigate("./pages/Home")
+      navigate("../")
     } catch (error) {
       console.log(error)
       toast.error(error.msg);
