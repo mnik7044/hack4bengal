@@ -12,8 +12,8 @@ export default function ForgotPassword() {
   }
 
   return (
-    <section>
-      <h1 className="text-3xl text-center mt-6 font-bold">Forgot Password</h1>
+    <section className="bg-[#CFB9FF]">
+      <h1 className="text-3xl text-center pt-6 font-bold">Forgot Password</h1>
       <div className="flex justify-center flex-wrap items-center max-w-6xl m-auto px-6 py-12">
         <div className="md:w-[67%] md:mb-6 lg:w-[50%] mb-12">
           <img

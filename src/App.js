@@ -8,7 +8,13 @@ import Profile from './pages/Profile';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
+import ContactUs from './pages/ContactUs';
+import FAQ from './pages/FAQ';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import ProjectDetails from './pages/ProjectDetails';
+import TermsOfUse from './pages/TermsOfUse';
 import Header from './components/Header';
+import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -24,7 +30,13 @@ function App() {
           <Route path='/Sign-In' element={<SignIn/>}></Route>
           <Route path='/Sign-Up' element={<SignUp/>}></Route>
           <Route path='/Forgot-Password' element={<ForgotPassword/>}></Route>
+          <Route path='/contact-us' element={<ContactUs/>}></Route>
+          <Route path='/faq' element={<FAQ/>}></Route>
+          <Route path='/privacy-policy' element={<PrivacyPolicy/>}></Route>
+          <Route path='/project-details' element={<ProjectDetails/>}></Route>
+          <Route path='/terms-of-use' element={<TermsOfUse/>}></Route>
         </Routes>
+        <Footer/>
       </Router>
     </>
   );

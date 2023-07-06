@@ -32,7 +32,7 @@ export default function Home() {
           className=" absolute h-[550px] w-500px] top-[45px] pr-20 right-0"
         />
       </div>
-      <div className=" font-semibold static w-[100vw] -top- pl-4 h-[500px] text-[40px] bg-violet-300">
+      <div className=" font-semibold static w-[100vw] -top- pl-4 h-[500px] text-[40px] bg-[#CFB9FF]">
         <h1>Book Doctors</h1>
         <h2>According to your location</h2>
       </div>
