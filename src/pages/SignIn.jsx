@@ -64,13 +64,13 @@ export default function SignIn() {
                   />
                 )}
               </div>
-            </div>{" "}
+            </div>
             <div className="flex justify-between font-medium whitespace-nowrap text-sm sm:text-base mb-4">
               <p>
                 Don't have an Account?
                 <Link
                   to="/Sign-Up"
-                  className=" text-white ml-1 hover:text-black transition duration-200 ease-in-out"
+                  className="text-white ml-1 hover:text-black transition duration-200 ease-in-out"
                 >
                   Register
                 </Link>
@@ -78,7 +78,7 @@ export default function SignIn() {
               <p>
                 <Link
                   to="/Forgot-Password"
-                  className=" text-white hover:text-black transition duration-200 ease-in-out"
+                  className="text-white hover:text-black transition duration-200 ease-in-out"
                 >
                   Forgot Password?
                 </Link>
@@ -90,8 +90,8 @@ export default function SignIn() {
             >
               SIGN IN
             </button>
-            <div className=" flex items-center my-4 before:border-t before:flex-1 before:border-white after:border-t after:flex-1 after:border-white">
-              <p className=" text-center font-semibold mx-4">OR</p>
+            <div className="flex items-center my-4 before:border-t before:flex-1 before:border-black after:border-t after:flex-1 after:border-black">
+              <p className="text-center font-semibold mx-4">OR</p>
             </div>
             <OAuth />
           </form>
