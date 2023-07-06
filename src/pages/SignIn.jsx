@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import OAuth from "../components/OAuth";
 import { signInWithEmailAndPassword, auth, getAuth } from "firebase/auth";
 import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
