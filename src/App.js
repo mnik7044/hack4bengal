@@ -19,6 +19,11 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Footer from './components/Footer';
+
+import PatientProfile from './pages/PatientProfile';
+
+import Room from './pages/Room';
+
 function App() {
   return (
     <>
@@ -36,6 +41,8 @@ function App() {
           <Route path='/Profile' element={<PrivateRoute/>}>
             <Route path='/Profile' element={<Profile/>}></Route>
           </Route>
+          <Route path='/PatientProfile' element={<PatientProfile/>}></Route>
+          <Route path='/Room/:roomId' element={<Room/>}></Route>
           <Route path='/Forgot-Password' element={<ForgotPassword/>}></Route>
           <Route path='/contact-us' element={<ContactUs/>}></Route>
           <Route path='/faq' element={<FAQ/>}></Route>
