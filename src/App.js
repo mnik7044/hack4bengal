@@ -15,12 +15,10 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import ProjectDetails from './pages/ProjectDetails';
 import TermsOfUse from './pages/TermsOfUse';
 import Header from './components/Header';
-<<<<<<< HEAD
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-=======
+
 import Footer from './components/Footer';
->>>>>>> fc4cdc44e1eac29a12942611b86a2be0a8d4ee15
 function App() {
   return (
     <>
@@ -28,15 +26,16 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/Profile' element={<PrivateRoute/>}>
-            <Route path='/Profile' element={<Profile/>}></Route>
-          </Route>
+          
           <Route path='/TeleMedicine' element={<TeleMedicine/>}></Route>
           <Route path='/MentalHealth' element={<MentalHealth/>}></Route>
           <Route path='/GenericMedicine' element={<GenericMedicine/>}></Route>
           <Route path='/AboutUs' element={<AboutUs/>}></Route>
           <Route path='/Sign-In' element={<SignIn/>}></Route>
           <Route path='/Sign-Up' element={<SignUp/>}></Route>
+          <Route path='/Profile' element={<PrivateRoute/>}>
+            <Route path='/Profile' element={<Profile/>}></Route>
+          </Route>
           <Route path='/Forgot-Password' element={<ForgotPassword/>}></Route>
           <Route path='/contact-us' element={<ContactUs/>}></Route>
           <Route path='/faq' element={<FAQ/>}></Route>
