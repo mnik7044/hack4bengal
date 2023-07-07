@@ -1,6 +1,8 @@
 import { getAuth } from "firebase/auth";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Profile() {
   const auth = getAuth();
@@ -27,9 +29,9 @@ export default function Profile() {
   const { name, email, dateOfBirth, gender, profileImage, state } = formData;
 
   function onLogout() {
-    auth.signOut().then(() => {
-      navigate("../");
-    });
+    auth.signOut();
+    navigate('../../Sign-In');
+    toast.success("Signed out successfully");
   }
 
   function handleProfileImageChange(event) {
