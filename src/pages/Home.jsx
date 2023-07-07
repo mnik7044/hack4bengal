@@ -1,11 +1,20 @@
-import React from "react";
 import "../index.css";
 import Type from "./Home/Type";
 
 import Nurse_svg from "./Home/Nurse_svg";
 import Searchbar from "./Home/Searchbar";
-
+import React, { useState, useEffect } from "react";
+import Page2background from "./Home/Page_2_background";
 export default function Home() {
+  // const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  // function getCurrentDimension() {
+  //   return {
+  //     width: window.innerWidth,
+  //     height: window.innerHeight,
+  //   };
+
+  // }
   return (
     <div className="flex flex-wrap content-center w-full ">
       <div className="relative flex justify-between h-80">
@@ -18,6 +27,7 @@ export default function Home() {
         <h2>According to your location</h2>
         <Searchbar></Searchbar>
       </div>
+      <Page2background></Page2background>
     </div>
   );
 }
