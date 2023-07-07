@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import OAuth from "../components/OAuth";
-import { signInWithEmailAndPassword, auth, getAuth } from "firebase/auth";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import OAuth from "../components/OAuth";
 
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,7 +14,7 @@ export default function SignIn() {
   });
 
   const { email, password } = formData;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function onChange(e) {
     setFormData((prevState) => ({
@@ -23,17 +23,17 @@ export default function SignIn() {
     }));
   }
 
-  async function onSubmit(e){
-    e.preventDefault()
+  async function onSubmit(e) {
+    e.preventDefault();
     try {
-      const auth = getAuth()
-      const userCredential = await signInWithEmailAndPassword(auth, email, password)
-      if(userCredential.user){
-        navigate("../")
+      const auth = getAuth();
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      if (userCredential.user) {
+        navigate("../Profile");
         toast.success("Signed in successfully");
       }
     } catch (error) {
-      toast.error("Bad user credentials")
+      toast.error("Bad user credentials");
     }
   }
 

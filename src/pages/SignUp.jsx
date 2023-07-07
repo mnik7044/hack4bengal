@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import OAuth from "../components/OAuth";
 import { getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
 import { db } from "../firebase";
-import { doc, serverTimestamp, setDoc, addDoc, collection } from "firebase/firestore";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,7 +30,6 @@ export default function SignUp() {
   async function onSubmit(e) {
     e.preventDefault();
     
-
      try {
       const auth = getAuth();
       const userCredential = await createUserWithEmailAndPassword(
@@ -49,7 +48,7 @@ export default function SignUp() {
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
       
-      navigate("../");
+      navigate("../Profile");
       
       toast.success("Sign up was successful");
 
