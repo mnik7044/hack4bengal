@@ -24,6 +24,8 @@ import PatientProfile from './pages/PatientProfile';
 
 import Room from './pages/Room';
 
+import ChatApp from './pages/ChatApp';
+
 function App() {
   return (
     <>
@@ -42,6 +44,7 @@ function App() {
             <Route path='/Profile' element={<Profile/>}></Route>
           </Route>
           <Route path='/PatientProfile' element={<PatientProfile/>}></Route>
+          <Route path='/ChatApp' element={<ChatApp/>}></Route>
           <Route path='/Room/:roomId' element={<Room/>}></Route>
           <Route path='/Forgot-Password' element={<ForgotPassword/>}></Route>
           <Route path='/contact-us' element={<ContactUs/>}></Route>
