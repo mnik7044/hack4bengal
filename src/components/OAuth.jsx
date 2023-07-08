@@ -29,7 +29,7 @@ export default function OAuth() {
           timestamp: serverTimestamp(),
         });
       }
-      navigate("../")
+      navigate("../Profile")
     } catch (error) {
       console.log(error)
       toast.error(error.msg);
