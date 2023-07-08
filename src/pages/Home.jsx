@@ -1,9 +1,8 @@
 import "../index.css";
 import Type from "./Home/Type";
 
-import Nurse_svg from "./Home/Nurse_svg";
+import NurseSvg from "./Home/Nurse_svg";
 import Searchbar from "./Home/Searchbar";
-import React, { useState, useEffect } from "react";
 import Page2background from "./Home/Page_2_background";
 export default function Home() {
   // const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -19,7 +18,7 @@ export default function Home() {
     <div className="flex flex-wrap content-center w-full ">
       <div className="relative flex justify-between h-80">
         <Type></Type>
-        <Nurse_svg></Nurse_svg>
+        <NurseSvg></NurseSvg>
       </div>
 
       <div className=" inline-block font-bold static w-full pt-[4rem] pl-4 h-[50vh] text-[40px] bg-violet-1">
