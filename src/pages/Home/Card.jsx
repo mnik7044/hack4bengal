@@ -1,6 +1,6 @@
 export default function Card(props) {
   const classes =
-    "rounded-[39px] items-center flex flex-col justify-center w-56 absolute top-[130vh] h-72 bg-pink-1 object-cover transition duration-500 cursor-pointer  hover:scale-110 " +
+    "rounded-[39px] w-56 m-4 relative top-[-69vh] h-72 bg-pink-1 object-cover transition duration-500 cursor-pointer  hover:scale-110 " +
     props.className;
 
   const title = props.title;

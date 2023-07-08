@@ -1,4 +1,5 @@
 import "../index.css";
+import Card from "./Home/Card";
 import Type from "./Home/Type";
 import Nurse_svg from "./Home/Nurse_svg";
 import Searchbar from "./Home/Searchbar";
@@ -46,8 +47,6 @@ export default function Home() {
       ></img>
 
       {/* Testimonial page */}
-
-      <Testimonials></Testimonials>
     </div>
   );
 }
