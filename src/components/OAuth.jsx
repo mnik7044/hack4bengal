@@ -30,6 +30,7 @@ export default function OAuth() {
         });
       }
       navigate("../Profile")
+      toast.success("Signed in successfully")
     } catch (error) {
       console.log(error)
       toast.error(error.msg);
