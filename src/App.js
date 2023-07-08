@@ -26,7 +26,6 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          
           <Route path='/TeleMedicine' element={<TeleMedicine/>}></Route>
           <Route path='/MentalHealth' element={<MentalHealth/>}></Route>
           <Route path='/GenericMedicine' element={<GenericMedicine/>}></Route>
