@@ -1,6 +1,5 @@
 import "../index.css";
 import Type from "./Home/Type";
-import Card from "./Home/Card";
 import Nurse_svg from "./Home/Nurse_svg";
 import Searchbar from "./Home/Searchbar";
 import React, { useState, useEffect } from "react";
@@ -36,7 +35,10 @@ export default function Home() {
       <h1 className="relative pt-20 pl-10 text-5xl font-extrabold top-14">
         Services we provide
       </h1>
-      <img className="relative pt-20 right-32 shrink-0" src={background}></img>
+      <img
+        className="relative flex -pt-[32px] left-[13rem] shrink-0"
+        src={background}
+      ></img>
       <CardStack></CardStack>
       <img
         className="absolute left-20 top-[160vh]  w-[356px] h-[356px]"
