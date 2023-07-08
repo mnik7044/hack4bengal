@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import OAuth from "../components/OAuth";
 
 export default function SignIn() {
@@ -11,6 +14,7 @@ export default function SignIn() {
   });
 
   const { email, password } = formData;
+  const navigate = useNavigate();
 
   function onChange(e) {
     setFormData((prevState) => ({
@@ -19,9 +23,23 @@ export default function SignIn() {
     }));
   }
 
+  async function onSubmit(e) {
+    e.preventDefault();
+    try {
+      const auth = getAuth();
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      if (userCredential.user) {
+        navigate("../Profile");
+        toast.success("Signed in successfully");
+      }
+    } catch (error) {
+      toast.error("Bad user credentials");
+    }
+  }
+
   return (
-    <section>
-      <h1 className="text-3xl text-center mt-6 font-bold">Sign In</h1>
+    <section className="bg-[#CFB9FF]">
+      <h1 className="text-3xl text-center pt-6 font-bold">Sign In</h1>
       <div className="flex justify-center flex-wrap items-center max-w-6xl m-auto px-6 py-12">
         <div className="md:w-[67%] md:mb-6 lg:w-[50%] mb-12">
           <img
@@ -31,7 +49,7 @@ export default function SignIn() {
           />
         </div>
         <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20">
-          <form>
+          <form onSubmit={onSubmit}>
             <div className="mb-4">
               <input
                 type="email"
