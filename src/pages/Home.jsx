@@ -1,10 +1,13 @@
 import "../index.css";
 import Type from "./Home/Type";
-
+import Card from "./Home/Card";
 import Nurse_svg from "./Home/Nurse_svg";
 import Searchbar from "./Home/Searchbar";
 import React, { useState, useEffect } from "react";
-import Page2background from "./Home/Page_2_background";
+import background from "../assets/back.png";
+import doctors from "../assets/doctors.png";
+import CardStack from "./Home/CardStack";
+import Testimonials from "./Home/Testimonial";
 export default function Home() {
   // const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
@@ -22,12 +25,27 @@ export default function Home() {
         <Nurse_svg></Nurse_svg>
       </div>
 
-      <div className=" inline-block font-bold static w-full pt-[4rem] pl-4 h-[50vh] text-[40px] bg-violet-1">
+      <div className=" inline-block font-bold static w-full pt-[4rem] pl-10 h-[47vh] text-[47px] bg-violet-1">
         <h1>Book Doctors</h1>
         <h2>According to your location</h2>
         <Searchbar></Searchbar>
       </div>
-      <Page2background></Page2background>
+
+      {/* SERVICES */}
+
+      <h1 className="relative pt-20 pl-10 text-5xl font-extrabold top-14">
+        Services we provide
+      </h1>
+      <img className="relative pt-20 right-32 shrink-0" src={background}></img>
+      <CardStack></CardStack>
+      <img
+        className="absolute left-20 top-[160vh]  w-[356px] h-[356px]"
+        src={doctors}
+      ></img>
+
+      {/* Testimonial page */}
+
+      <Testimonials></Testimonials>
     </div>
   );
 }
