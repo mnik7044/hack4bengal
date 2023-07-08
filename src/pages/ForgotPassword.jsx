@@ -2,6 +2,9 @@ import React, { useState } from "react";
 // import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import OAuth from "../components/OAuth";
+import { toast } from "react-toastify";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ForgotPassword() {
   // const [showPassword, setShowPassword] = useState(false);
@@ -11,9 +14,20 @@ export default function ForgotPassword() {
     setEmail(e.target.value);
   }
 
+  async function onSubmit(e){
+    e.preventDefault()
+    try {
+      const auth = getAuth()
+      await sendPasswordResetEmail(auth, email)
+      toast.success("Email was sent");
+    } catch (error) {
+      toast.error("Could not send reset password")
+    }
+  }
+
   return (
-    <section>
-      <h1 className="text-3xl text-center mt-6 font-bold">Forgot Password</h1>
+    <section className="bg-[#CFB9FF]">
+      <h1 className="text-3xl text-center pt-6 font-bold">Forgot Password</h1>
       <div className="flex justify-center flex-wrap items-center max-w-6xl m-auto px-6 py-12">
         <div className="md:w-[67%] md:mb-6 lg:w-[50%] mb-12">
           <img
@@ -23,7 +37,7 @@ export default function ForgotPassword() {
           />
         </div>
         <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20 lg:-mt-6">
-          <form>
+          <form onSubmit={onSubmit}>
             <div className="mb-4">
               <input
                 type="email"

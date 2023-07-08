@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA8VdXqIoQGWtyGnoUNif4torQzylZRE6E",
-  authDomain: "realtor-clone-react-ekam.firebaseapp.com",
-  projectId: "realtor-clone-react-ekam",
-  storageBucket: "realtor-clone-react-ekam.appspot.com",
-  messagingSenderId: "952618247643",
-  appId: "1:952618247643:web:fed1172565bd979c0973fe"
+  apiKey: "AIzaSyB1ViTlXY3Qjhwv9-8qQQXzezycObsdj9w",
+  authDomain: "healify-ecc09.firebaseapp.com",
+  projectId: "healify-ecc09",
+  storageBucket: "healify-ecc09.appspot.com",
+  messagingSenderId: "567107365240",
+  appId: "1:567107365240:web:b023e6e985ed2e009b808d"
 };
 
 // Initialize Firebase
