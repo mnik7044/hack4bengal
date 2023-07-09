@@ -27,10 +27,12 @@ import Room from './pages/Room';
 import ChatApp from './pages/ChatApp';
 
 function App() {
+  const services = {};
+
   return (
     <>
       <Router>
-        <Header/>
+        <Header />
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/TeleMedicine/*' element={<TeleMedicine/>}></Route>
