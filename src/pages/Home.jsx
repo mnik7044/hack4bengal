@@ -1,8 +1,7 @@
 import "../index.css";
-import Card from "./Home/Card";
 import Type from "./Home/Type";
 
-import Nurse_svg from "./Home/Nurse_svg";
+import { ReactComponent as Nurse } from "../assets/Ladingpage.svg";
 import Searchbar from "./Home/Searchbar";
 import React, { useState, useEffect } from "react";
 import background from "../assets/back.png";
@@ -19,7 +18,7 @@ export default function Home() {
     <div className="flex flex-wrap content-center w-full ">
       <div className="relative flex justify-between h-80">
         <Type></Type>
-        <Nurse_svg></Nurse_svg>
+        <Nurse></Nurse>
       </div>
 
       <div className=" inline-block font-bold static w-full pt-[4rem] pl-10 h-[47vh] text-[47px] bg-violet-1">
