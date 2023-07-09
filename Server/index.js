@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+//const cors = require('cors');
 
-app.use(cors)
+
 
 // Connect to MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/medicineDB', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -48,6 +48,7 @@ const dummyMedicines = [
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
+///app.use(cors)
 
 // Home route
 app.get('/', (req, res) => {
@@ -96,7 +97,7 @@ app.get('/', (req, res) => {
 
   
 // Start the server
-const port = 3053;
+const port = 3065;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
