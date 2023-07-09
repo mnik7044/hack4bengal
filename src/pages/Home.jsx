@@ -1,6 +1,7 @@
 import "../index.css";
 import Card from "./Home/Card";
 import Type from "./Home/Type";
+
 import Nurse_svg from "./Home/Nurse_svg";
 import Searchbar from "./Home/Searchbar";
 import React, { useState, useEffect } from "react";
@@ -12,21 +13,13 @@ import image1 from "../assets/image4.png";
 import image2 from "../assets/image2.png";
 import image3 from "../assets/image3.png";
 import ArticleCard from "./Home/ArticleCard";
+
 export default function Home() {
-  // const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-  // function getCurrentDimension() {
-  //   return {
-  //     width: window.innerWidth,
-  //     height: window.innerHeight,
-  //   };
-
-  // }
   return (
     <div className="flex flex-wrap content-center w-full ">
       <div className="relative flex justify-between h-80">
         <Type></Type>
-        <Nurse_svg></Nurse_svg>
+        <NurseSvg></NurseSvg>
       </div>
 
       <div className=" inline-block font-bold static w-full pt-[4rem] pl-10 h-[47vh] text-[47px] bg-violet-1">

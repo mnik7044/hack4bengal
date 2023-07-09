@@ -56,7 +56,7 @@ export default function Profile() {
                     <td className="w-[40%] text-lg font-medium py-4">Name:</td>
                     <td>
                       <input
-                        type="text"
+                        type="string"
                         id="name"
                         value={name}
                         disabled

@@ -19,6 +19,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Footer from './components/Footer';
+
+import PatientProfile from './pages/PatientProfile';
+
+import Room from './pages/Room';
+
+import ChatApp from './pages/ChatApp';
+
 function App() {
   const services = {};
 
@@ -28,8 +35,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          
-          <Route path='/TeleMedicine' element={<TeleMedicine/>}></Route>
+          <Route path='/TeleMedicine/*' element={<TeleMedicine/>}></Route>
           <Route path='/MentalHealth' element={<MentalHealth/>}></Route>
           <Route path='/GenericMedicine' element={<GenericMedicine/>}></Route>
           <Route path='/AboutUs' element={<AboutUs/>}></Route>
@@ -38,6 +44,9 @@ function App() {
           <Route path='/Profile' element={<PrivateRoute/>}>
             <Route path='/Profile' element={<Profile/>}></Route>
           </Route>
+          <Route path='/PatientProfile' element={<PatientProfile/>}></Route>
+          <Route path='/ChatApp' element={<ChatApp/>}></Route>
+          <Route path='/Room/:roomId' element={<Room/>}></Route>
           <Route path='/Forgot-Password' element={<ForgotPassword/>}></Route>
           <Route path='/contact-us' element={<ContactUs/>}></Route>
           <Route path='/faq' element={<FAQ/>}></Route>
