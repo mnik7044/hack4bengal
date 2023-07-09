@@ -13,7 +13,7 @@ const PatientProfile = () => {
 
     const handleJoinChatRoom = useCallback(() => {
         navigate(`/ChatApp`)
-    }, [navigate, value]);
+    }, [navigate]);
 
     return <div>
         <input value = {value} onChange = {e => setValue(e.target.value)} type='text' placeholder='Enter Room Code'/>
