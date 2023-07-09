@@ -1,12 +1,12 @@
 export default function Searchbar() {
   return (
     <div>
-      <form className="flex items-center">
+      <form className="relative flex p-10">
         <label htmlFor="simple-search" className="sr-only">
           Search
         </label>
-        <div className="relative ">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-1 pointer-events-none"></div>
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-10 pointer-events-none"></div>
           <input
             type="text"
             id="simple-search"
