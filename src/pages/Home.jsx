@@ -1,7 +1,7 @@
 import "../index.css";
 import Type from "./Home/Type";
 
-import { ReactComponent as Nurse } from "../assets/Ladingpage.svg";
+import Nurse from "../assets/nurse.png";
 import Searchbar from "./Home/Searchbar";
 import React, { useState, useEffect } from "react";
 import background from "../assets/back.png";
@@ -18,7 +18,10 @@ export default function Home() {
     <div className="flex flex-wrap content-center w-full ">
       <div className="relative flex justify-between h-80">
         <Type></Type>
-        <Nurse></Nurse>
+        <img
+          className="@apply relative left-60 w-[524px] h-[552px] shrink-0;"
+          src={Nurse}
+        ></img>
       </div>
 
       <div className=" inline-block font-bold static w-full pt-[4rem] pl-10 h-[47vh] text-[47px] bg-violet-1">
