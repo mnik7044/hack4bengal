@@ -19,7 +19,7 @@ export default function Home() {
     <div className="flex flex-wrap content-center w-full ">
       <div className="relative flex justify-between h-80">
         <Type></Type>
-        <NurseSvg></NurseSvg>
+        <Nurse_svg></Nurse_svg>
       </div>
 
       <div className=" inline-block font-bold static w-full pt-[4rem] pl-10 h-[47vh] text-[47px] bg-violet-1">
