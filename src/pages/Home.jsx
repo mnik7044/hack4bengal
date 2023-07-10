@@ -19,7 +19,7 @@ export default function Home() {
       <div className="relative flex justify-between h-80">
         <Type></Type>
         <img
-          className="@apply relative left-60 w-[524px] h-[552px] shrink-0;"
+          className="@apply relative flex-end w-[524px] h-[552px] shrink-0;"
           src={Nurse}
         ></img>
       </div>
