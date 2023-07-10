@@ -41,11 +41,13 @@ export default function Home() {
       ></img>
       <CardStack></CardStack>
       <img
-        className="absolute left-20 top-[180vh]  w-[356px] h-[356px]"
+        className="absolute left-20 top-[160vh]  w-[356px] h-[356px]"
         src={doctors}
       ></img>
 
       <div>
+        {/* Symptoms and diseases */}
+
         <div className="pl-10 font-bold text-8xl font-Lato">
           Wanna read about diseases and their symptoms ?
         </div>
